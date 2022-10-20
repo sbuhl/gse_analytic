@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="purchase_order_custo" model="ir.ui.view">
+        <field name="name">purchase.shipped</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='currency_id']" position="after">
+                <field name="gse_default_analytic_id"/>
+              </xpath>
+
+        </field>
+    </record>
+
+</odoo>
